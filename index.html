@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a su banca digital</h1>
+    </header>
+
+<!---Formulario para validar usuario-->
+    <form id="user_form" class="form_input">
+        <h3>Por favor, ingrese sus datos de usuario</h3>
+
+        <input type="text" id="user_input" placeholder="Usuario">
+        <input type="password" id="password_input" placeholder="Contraseña">
+
+        <button type="submit">Ingresar</button>
+
+        <span id="user_error" class="hide_error"></span>
+
+    </form>
+
+<!---Interfaz de usuario de la banca-->
+    <div id="bank_interface" class="hide_error">
+
+        <!---Menú de opciones-->    
+        <div id="operations_menu_window" class="operation_menu">
+            <div id="user_greeting"></div>
+            <h3 class="title_text">¿Qué operación desea hacer?</h3>
+            <div class="button_array">
+                <button id="show_balance" class="button_style">Consultar saldo</button>
+                <button id="show_deposit" class="button_style">Ingresar monto</button>
+                <button id="show_withdraw" class="button_style">Retirar monto</button>
+            </div>
+            <button id="exit_from_menu" class="button_style">Salir</button>
+        </div>
+
+        <!---Ventana de consulta de saldo-->
+        <div id="balance_window" class="hide_error">
+            <h3 id="actual_balance"></h3>
+            <button id="return_from_balance" class="button_style">Regresar</button>
+        </div>
+
+        <!---Ventana para depósitos-->
+        <div id="deposit_window" class="hide_error">
+            <h3>Ingrese la cantidad que desea depositar</h3>
+            <form id="deposit_form">
+                <input type="number"  id="deposit_input">
+                <button type="submit" class="button_style">Depositar</button>
+                <button id="return_from_deposit" class="button_style">Regresar</button>
+            </form>
+        </div>
+        <!---Ventana para retiros-->
+        <div id="withdraw_window" class="hide_error">
+            <h3>Ingrese la cantidad que desea retirar</h3>
+            <form id="withdraw_form">
+                <input type="number" id="withdraw_input">
+                <button type="submit" class="button_style">Retirar</button>
+                <button id="return_from_withdraw" class="button_style">Regresar</button>
+            </form>
+        </div>
+
+    </div>
+
+
+    
+
+
+    <script src="main.js"></script>
+</body>
+</html>
